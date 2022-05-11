@@ -1,0 +1,18 @@
+module eat(input [9:0] BallX, BallY, blinkyX, blinkyY, pinkyX, pinkyY, inkyX, inkyY, clydeX, clydeY,
+			  output eaten);
+			  
+	always_comb begin
+		if((BallX == blinkyX) && (BallY == blinkyY))
+			eaten = 1'b1;
+		else if((BallX == pinkyX) && (BallY == pinkyY))
+			eaten = 1'b1;
+		else if((BallX == inkyX) && (BallY == inkyY))
+			eaten = 1'b1;
+		else if((BallX == clydeX) && (BallY == clydeY))
+			eaten = 1'b1;
+		else
+			eaten = 1'b0;
+	end
+	
+	
+endmodule
